@@ -10,4 +10,10 @@ Describe: Pizza.prototype.costForToppings = function ()
 Test 1: It should return a method for calculating the cost of toppings.
 Code: orderPizza.costForToppings();
 Expected Output: a number that reflects the cost of toppings.
+
+Describe: Pizza.prototype.costForSize = function ()
+
+Test 1: It should return a method for calculating the cost of the pizza's size.
+Code: orderPizza.costForSize();
+Expected Output: a number that reflects the cost of the pizza's size.
 ```
