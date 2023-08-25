@@ -5,20 +5,25 @@ function Pizza(pizzaToppings, pizzaSize) {
 }
 
 Pizza.prototype.costForToppings = function () {
-  this.toppings.length * 4;
-  console.log(this.toppings.length * 4);
+  let toppingCost = this.toppings.length * 4;
+  return toppingCost;
 };
 
 Pizza.prototype.costForSize = function () {
   switch (this.size) {
     case ("large"):
-      console.log("large cost +5");
+      return 5;
       break;
     case ("medium"):
-      console.log("medium cost +4");
+      return 4;
       break;
     case ("small"):
-      console.log("small cost +3"); 
+      return 3; 
       break;
   }
+}
+
+Pizza.prototype.totalCost = function () {
+  let totalCost = (this.costForSize() + this.costForToppings());
+  return totalCost;
 }
