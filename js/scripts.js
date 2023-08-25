@@ -24,6 +24,6 @@ Pizza.prototype.costForSize = function () {
 }
 
 Pizza.prototype.totalCost = function () {
-  let totalCost = (this.costForSize() + this.costForToppings());
+  let totalCost = (this.costForSize() + this.costForToppings()) +5;
   return totalCost;
 }
