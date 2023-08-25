@@ -7,7 +7,7 @@ Expected Output: Pizza { toppings: ["cheese", "pepperoni"], size: "large" }
 
 Describe: Pizza.prototype.cost = function ()
 
-Test 1: It should return a method for calculating the cost of a pizza with additional toppings.
-Code: orderPizza.cost();
-Expected Output: a number that reflects the price of additional toppings, i.e. 15 (dollars).
+Test 1: It should return a method for calculating the number of toppings.
+Code: orderPizza.addToppings();
+Expected Output: a number that reflects the number of toppings.
 ```
