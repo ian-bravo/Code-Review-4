@@ -7,13 +7,11 @@
   <title>~Pizza Parlor Order Form~</title>
 </head>
 <body>
-  whiteboard:
-  checkbox for toppings
-  radio for size
-  button for submit
-  add classes onevent
+  <h1>Welcome to online ordering for Pizza Parlor! </h1>
+  <h2>Please pick a size and select toppings:</h2>
   <form id="order-form">
-    <br />
+    <p>Select a size:</p>
+    <p>Sm = $3, Med = $4, Lrg = $5</p>
     <input type="radio" name="size" value="small" id="size-small"/>
     <label for="size-small">Small</label>
     <br />
@@ -23,6 +21,8 @@
     <input type="radio" name="size" value="large" id="size-large" checked/>
     <label for="size-large">Large</label>
     <br />
+    <br />
+    <p>Select a topping ($4 each)</p>
     <input type="checkbox" id="cheese" name="cheese" checked />
     <label for="cheese">Cheese</label>
     <br />
@@ -44,13 +44,14 @@
     <input type="checkbox" id="ham" name="ham"/>
     <label for="ham">Ham</label>
     <br />
-    <input type="checkbox" id="anchovy" name="anchovy"/>
-    <label for="anchovy">Anchovy</label>
+    <input type="checkbox" id="linguica" name="linguica"/>
+    <label for="linguica">Linguica</label>
     <br />
     <button type="submit">Submit</button>
-    <div id="total" class="hidden"></div>
+  </form>  
+  <div id="total" class="hidden">
     <h3>Your total is:</h3>
-
-  </form>
+    <p id="answer-reveal"></p>
+  </div>
 </body>
 </html>
