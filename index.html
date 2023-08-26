@@ -11,7 +11,7 @@
   <h2>Please pick a size and select toppings:</h2>
   <form id="order-form">
     <p>Select a size:</p>
-    <p>Sm = $3, Med = $4, Lrg = $5</p>
+    <p>Sm = $5, Med = $7, Lrg = $9</p>
     <input type="radio" name="size" value="small" id="size-small"/>
     <label for="size-small">Small</label>
     <br />
@@ -48,12 +48,13 @@
     <label for="linguica">Linguica</label>
     <br />
     <button type="submit">Submit</button>
+    <button type="button" class="reset">Reset Form</button>
   </form>  
   <div id="total" class="hidden">
     <h3>Your total is:</h3>
-    <p>Size Cost: <span id="size-cost"></span></p>
-    <p>Topping Total: <span id="topping-total"></span></p>
-    <p>Topping Total: <span id="topping-total"></span></p>
+    <p>Size Cost: <span id="display-size-cost"></span></p>
+    <p>Topping Total: <span id="display-topping-total"></span></p>
+    <p>Total: <span id="display-total"></span></p>
   </div>
 </body>
 </html>
