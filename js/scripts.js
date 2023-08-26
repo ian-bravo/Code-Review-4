@@ -27,3 +27,23 @@ Pizza.prototype.totalCost = function () {
   let totalCost = (this.costForSize() + this.costForToppings()) +5;
   return totalCost;
 }
+
+// User Interface Logic ~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+function handleFormSubmission(event) {
+  event.preventDefault();
+  const toppingChoices = document.querySelector("input[name='toppings']:checked").value
+  const sizeChoice = document.querySelector("input[name='size']:checked").value;
+  let orderPizza = new Pizza(toppingChoices, sizeChoice);
+  orderPizza.totalCost(); 
+}
+
+
+window.addEventListener("load", function) () {
+  document.querySelector("form#order-form").addEventListener("submit", handleFormSubmission)
+}
