@@ -37,8 +37,13 @@ Pizza.prototype.totalCost = function () {
 
 function handleFormSubmission(event) {
   event.preventDefault();
-    const toppingChoices = document.querySelector("input[name='toppings']:checked").value;
-
+  // const toppingChoices = document.querySelector("input[name='toppings']:checked").value;
+  let toppingChoices = [];
+  document.querySelectorAll('[type="checkbox"]').forEach(function(choice) {
+    if (choice.checked === true) {
+      toppingChoices.push(choice.value);
+    }
+  });
 //NEED TO FIND HOW TO GET CHECKBOX VALUES - watch youtube
 
   // let toppingChoices = document.getElementsByName('toppings').forEach(function(checked){
@@ -52,9 +57,8 @@ function handleFormSubmission(event) {
 
   // let checkedToppings = document.querySelectorAll('.toppings')
   //   checkedToppings.forEach((checkbox))
-  console.log(toppingChoices);
+
   const sizeChoice = document.querySelector("input[name='size']:checked").value;
-  console.log(sizeChoice);
   let orderPizza = new Pizza(toppingChoices, sizeChoice);
   
   const displayTotal = orderPizza.totalCost(); 
