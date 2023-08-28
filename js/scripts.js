@@ -29,34 +29,15 @@ Pizza.prototype.totalCost = function () {
 }
 
 // User Interface Logic ~~~~~~~~~~~~~~~~~~
-
-
-
-
-
-
 function handleFormSubmission(event) {
   event.preventDefault();
-  // const toppingChoices = document.querySelector("input[name='toppings']:checked").value;
-  let toppingChoices = [];
+
+  const toppingChoices = [];
   document.querySelectorAll('[type="checkbox"]').forEach(function(choice) {
     if (choice.checked === true) {
       toppingChoices.push(choice.value);
     }
   });
-//NEED TO FIND HOW TO GET CHECKBOX VALUES - watch youtube
-
-  // let toppingChoices = document.getElementsByName('toppings').forEach(function(checked){
-  //   checked.addEventListener('click', function () {
-  //     if(this.checked){
-  //       // return this.value;
-  //       console.log(this.value);
-  //     }
-  //   });
-  // });
-
-  // let checkedToppings = document.querySelectorAll('.toppings')
-  //   checkedToppings.forEach((checkbox))
 
   const sizeChoice = document.querySelector("input[name='size']:checked").value;
   let orderPizza = new Pizza(toppingChoices, sizeChoice);
@@ -64,10 +45,21 @@ function handleFormSubmission(event) {
   const displayTotal = orderPizza.totalCost(); 
   console.log(displayTotal);
   document.querySelector("span#display-total").innerText = displayTotal;
-  
 }
 
-
 window.addEventListener("load", function () {
-  document.querySelector("form#order-form").addEventListener("submit", handleFormSubmission)
+  document.querySelector("form#order-form").addEventListener("submit", handleFormSubmission);
 });
+
+  // const resetButtonClick = document.getElementById("reset");
+  // resetButtonClick.onclick = function () {
+  //   document.getElementById('order-form').reset();
+  // }
+
+  // document.getElementById("reset").addEventListener("click", handleReset);
+
+
+// function handleReset () {
+//   document.getElementById("order-form").reset();
+// }
+
