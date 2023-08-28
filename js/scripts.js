@@ -31,35 +31,19 @@ Pizza.prototype.totalCost = function () {
 // User Interface Logic ~~~~~~~~~~~~~~~~~~
 function handleFormSubmission(event) {
   event.preventDefault();
-
   const toppingChoices = [];
   document.querySelectorAll('[type="checkbox"]').forEach(function(choice) {
     if (choice.checked === true) {
       toppingChoices.push(choice.value);
     }
   });
-
   const sizeChoice = document.querySelector("input[name='size']:checked").value;
   let orderPizza = new Pizza(toppingChoices, sizeChoice);
-  
   const displayTotal = orderPizza.totalCost(); 
-  console.log(displayTotal);
   document.querySelector("span#display-total").innerText = displayTotal;
 }
 
 window.addEventListener("load", function () {
   document.querySelector("form#order-form").addEventListener("submit", handleFormSubmission);
 });
-
-  // const resetButtonClick = document.getElementById("reset");
-  // resetButtonClick.onclick = function () {
-  //   document.getElementById('order-form').reset();
-  // }
-
-  // document.getElementById("reset").addEventListener("click", handleReset);
-
-
-// function handleReset () {
-//   document.getElementById("order-form").reset();
-// }
 
